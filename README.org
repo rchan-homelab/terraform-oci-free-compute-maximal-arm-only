@@ -1,4 +1,6 @@
 #+TITLE: terraform-oci-free-compute-maximal-example
+* Note for this repo
+  Only set resources to create One (1) AMD Flex instance running the latest Oracle Linux distribution ONLY, since the x86 offering is very weak and not worth to use
 * What it is
   A Terraform configuration for compute resources on the Free Tier of Oracle Cloud Infrastructure.
 * What it does
