@@ -15,8 +15,8 @@
         The root Compartment of the tenancy
         #+end_example
 ** Quick-Create Link
-   1. Open the following link in your browser:
-      https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/RhubarbSin/terraform-oci-free-compute-maximal-example/archive/refs/tags/v0.2.0.zip
+   1. Open the following link in your browser (update release tag as needed in the future):
+      https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/rchan-homelab/terraform-oci-free-compute-maximal-arm-only/archive/refs/tags/v1.0.0.zip
    2. On the *Create stack* page, select the check box labeled "I have reviewed and accept the Oracle Terms of Use."
    3. Click on the *Next* button and provide an SSH public key.
    4. Click *Next* again.
@@ -44,18 +44,12 @@
     + One (1) Internet Gateway
     + One (1) Subnet
     + One (1) Network Security Group
-    + Two (2) AMD Micro instances running the latest available Ubuntu distribution with the following specifications:
-      - 1 OCPU
-      - 1 GiB of memory
-      - 50 GiB of storage
-      - 1 ephemeral public IP address
     + One (1) AMD Flex instance running the latest Oracle Linux distribution with the following specifications:
       - 4 OCPUs
       - 24 GiB of memory
-      - 100 GiB of storage
+      - 200 GiB of storage (reclaimed from deleted AMD Micro instances)
       - 1 reserved public IP address
     + One (1) volume backup policy that will create a backup of each boot volume on a daily basis and retain the backup for one day (due to the limitation of five volume backups)
-  - On the Ubuntu instances, Apparmor is removed by cloud-init.
   - On the Oracle Linux instance, a kernel boot argument is added to disable loading of SELinux, but because cloud-init is configured not to execute its power-state-change module, that instance must be rebooted for the change to take effect.
   - The default security list that is explicitly associated with the subnet allows inbound traffic to ports 22, 80, and 443 from any origin and all outbound traffic to any destination.
   - The network security group associated with the instances' VNICs allows inbound ICMP echo (i.e. ping) traffic from any origin.
