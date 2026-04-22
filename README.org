@@ -16,7 +16,7 @@
         #+end_example
 ** Quick-Create Link
    1. Open the following link in your browser (update release tag as needed in the future):
-      https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/rchan-homelab/terraform-oci-free-compute-maximal-arm-only/archive/refs/tags/v1.0.0.zip
+      https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/rchan-homelab/terraform-oci-free-compute-maximal-arm-only/archive/refs/tags/v1.0.2.zip
    2. On the *Create stack* page, select the check box labeled "I have reviewed and accept the Oracle Terms of Use."
    3. Click on the *Next* button and provide an SSH public key.
    4. Click *Next* again.
@@ -44,7 +44,7 @@
     + One (1) Internet Gateway
     + One (1) Subnet
     + One (1) Network Security Group
-    + One (1) AMD Flex instance running the latest Oracle Linux distribution with the following specifications:
+    + One (1) AMD Flex instance running the latest Ubuntu distribution with the following specifications:
       - 4 OCPUs
       - 24 GiB of memory
       - 200 GiB of storage (reclaimed from deleted AMD Micro instances)
