@@ -114,11 +114,12 @@ data "oci_core_images" "this" {
 
   compartment_id = oci_identity_compartment.this.id
 
-  operating_system = each.value.operating_system
-  shape            = each.value.shape
-  sort_by          = "DISPLAYNAME"
-  sort_order       = "DESC"
-  state            = "AVAILABLE"
+  operating_system 	   = each.value.operating_system
+  operating_system_version = each.value.operating_system_version
+  shape                    = each.value.shape
+  sort_by                  = "DISPLAYNAME"
+  sort_order               = "DESC"
+  state                    = "AVAILABLE"
 }
 
 resource "oci_core_instance" "oracle" {
@@ -126,7 +127,7 @@ resource "oci_core_instance" "oracle" {
   compartment_id      = oci_identity_compartment.this.id
   shape               = local.instance.oracle.shape
 
-  display_name         = "Oracle Linux"
+  display_name         = "Ubuntu"
   preserve_boot_volume = false
 
   metadata = {
@@ -142,8 +143,8 @@ resource "oci_core_instance" "oracle" {
 
   create_vnic_details {
     assign_public_ip = false
-    display_name     = "Oracle Linux"
-    hostname_label   = "oracle-linux"
+    display_name     = "Ubuntu"
+    hostname_label   = "ubuntu"
     nsg_ids          = [oci_core_network_security_group.this.id]
     subnet_id        = oci_core_subnet.this.id
   }
