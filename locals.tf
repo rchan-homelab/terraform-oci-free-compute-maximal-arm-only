@@ -12,7 +12,11 @@ locals {
       operating_system : "Canonical Ubuntu",
       operating_system_version : "24.04",
       user_data : {
-        runcmd : ["apt-get remove --quiet --assume-yes --purge apparmor"],
+        runcmd : [
+          "apt-get update --quiet --assume-yes",
+          "apt-get remove --quiet --assume-yes --purge apparmor",
+          "apt-get autoremove --quiet --assume-yes",
+        ],
       },
     },
   }
