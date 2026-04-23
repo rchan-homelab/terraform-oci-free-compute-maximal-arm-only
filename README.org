@@ -1,11 +1,11 @@
-#+TITLE: terraform-oci-free-compute-maximal-example
+#+TITLE: terraform-oci-free-compute-maximal-arm-only
 ***** Credit: https://github.com/RhubarbSin/terraform-oci-free-compute-maximal-example
 * Note for this repo
   Only set resources to create One (1) AMD Flex instance running the latest Oracle Linux distribution ONLY, since the x86 offering is very weak and not worth to use
 * What it is
   A Terraform configuration for compute resources on the Free Tier of Oracle Cloud Infrastructure.
 * What it does
-  Deploys a maximal set of resources to run compute instances on the OCI Free Tier.
+  Deploys a maximal set of resources to run compute instances on the OCI Free Tier. Specifically, the A1 Flex Compute Instance with all Free Tier resources maximized.
 * How to use it
   For simplicity—to avoid the need to install and configure Terraform and the OCI CLI—this configuration is designed for deployment as a stack in the OCI Resource Manager. Resource Manager offers two options for doing so: quick-create link (recommended) and manual deployment. Regardless of which option you choose, begin with the following steps and /then/ proceed to either *Quick-Create Link* or *Manual Deployment* below.
   1. Log into the Oracle Cloud Infrastructure Console.
