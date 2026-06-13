@@ -46,8 +46,8 @@
     + One (1) Subnet
     + One (1) Network Security Group
     + One (1) AMD Flex instance running the latest Ubuntu distribution with the following specifications:
-      - 4 OCPUs
-      - 24 GiB of memory
+      - 2 OCPUs (Terms changed on June 11 2026)
+      - 12 GiB of memory (Terms changed on June 11 2026)
       - 200 GiB of storage (reclaimed from deleted AMD Micro instances)
       - 1 reserved public IP address
     + One (1) volume backup policy that will create a backup of each boot volume on a daily basis and retain the backup for one day (due to the limitation of five volume backups)

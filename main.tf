@@ -150,8 +150,8 @@ resource "oci_core_instance" "oracle" {
   }
 
   shape_config {
-    memory_in_gbs = 24
-    ocpus         = 4
+    memory_in_gbs = 12
+    ocpus         = 2
   }
 
   source_details {
